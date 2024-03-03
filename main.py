@@ -1,6 +1,7 @@
 from flask import Flask, render_template, send_file, request, flash
 from email.message import EmailMessage
 import ssl
+import os
 import smtplib
 
 app = Flask(__name__)
@@ -39,7 +40,8 @@ def send_message():
 
 @app.route('/download_cv')
 def download_cv():
-    pdf_path = "C:/Users/18097/Desktop/Portafolio/curriculum.pdf"
+    pdf_filename = "curriculum.pdf"
+    pdf_path = os.path.join(app.root_path, 'static', pdf_filename)
     return send_file(pdf_path, as_attachment=True)
 
 if __name__ == '__main__':
