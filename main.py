@@ -28,15 +28,15 @@ def send_message():
         contact_email["From"] = email_from
         contact_email["To"] = email_receiver
         contact_email["Subject"] = subject
-        contact_email.set_content(f"Name: {name}\nPhone: {phone}\nMessage: {message}")
+        contact_email.set_content(f"Email:{email_from} \nName: {name}\nPhone: {phone}\nMessage: {message}")
 
         context = ssl.create_default_context()
 
         with smtplib.SMTP_SSL('smtp.gmail.com', 465, context=context) as smtp:
             smtp.login(email_receiver, email_password)
             smtp.send_message(contact_email)
-        flash(f"Thank so much for {name} contanct me I'll be more than glad to reach back a'")
-        return "Email sent successfully!"
+        flash(f"Thank you so much {name} I will be more than happy to reach back as soon as posible ")
+        return render_template('index.html')
 
 @app.route('/download_cv')
 def download_cv():

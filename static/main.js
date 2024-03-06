@@ -11,6 +11,11 @@ function mostrarOcultarMenu(){
     }
 }
 
+setTimeout(function() {
+    var flashMessage = document.getElementById('flash-message');
+    flashMessage.style.display = 'none';
+}, 10000);
+
 function seleccionar(){
     //oculto el menu una vez que selecciono una opcion
     document.getElementById("nav").classList = "";

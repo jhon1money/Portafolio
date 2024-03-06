@@ -9,8 +9,10 @@
 
     <title>Portafolio</title>
     <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+  
 </head>
 <body>
+
     <!-- MENU ENCABEZADO -->
     <div class="contenedor-header">
         <header>
@@ -32,8 +34,7 @@
             </div>
         </header>
     </div>
-<!-- <br>
-<br> -->
+   
     <!-- SECCION INICIO -->
     <section id="inicio" class="inicio">
         <div class="contenido-banner">
@@ -48,11 +49,12 @@
                 <a href="#"><img src="{{ url_for('static', filename='image/github.png') }}" alt="github"></a>
                 <a href="#"><img src="{{ url_for('static', filename='image/linkedin.png') }}" alt="linkedin"></a>
                 <a href="#"><img src="{{ url_for('static', filename='image/instagram.png') }}" alt="instagram"></a>
-
+                
             </div>
         </div>
     </section>
-
+    
+    
     <!-- SECCION SOBRE MI -->
     <section id="sobremi" class="sobremi">
         <div class="contenido-seccion">
@@ -61,10 +63,10 @@
                 Collaborating within dynamic teams, I've contributed to the successful delivery of high-level academic projects, including a comprehensive task management system and an online learning platform. 
                 Committed to continual growth, I aspire to leverage my skills to drive innovation and make meaningful contributions to society. 
                 For further inquiries or to connect professionally, please feel free to reach out <a href="#contacto" class="styled-link">On <span class="highlighted">this</span> form.</a></li></p>
-
-
-            <div class="fila">
-                <!-- datos personales -->
+                
+                
+                <div class="fila">
+                    <!-- datos personales -->
                 <div class="col">
                     <h3>Personal Information</h3>
                     <ul>
@@ -148,10 +150,10 @@
                 });
             </script>
             
-
+            
         </div>
     </section>
-
+    
     <!-- SECCION SKILLS -->
     <section class="skills" id="skills">
         <div class="contenido-seccion">
@@ -248,7 +250,7 @@
             </div>
         </div>
     </section>
-
+    
     <!-- SECCION CURRICULUM -->
     <section id="curriculum" class="curriculum">
         <div class="contenido-seccion">
@@ -263,30 +265,43 @@
                         <p>During my time at ITLA, I had the opportunity to immerse myself in a dynamic and challenging academic environment, where I acquired a strong set of technical skills and fundamental programming knowledge. 
                             My experiences as a student were not limited to the classroom;
                             I actively participated in collaborative projects where I was able to apply my skills in problem solving and creating innovative solutions.</p>
-                        <div class="conectori">
-                            <div class="circuloi"></div>
+                            <div class="conectori">
+                                <div class="circuloi"></div>
+                            </div>
                         </div>
-                    </div>
-                    <div class="item izq">
+                        <div class="item izq">
                         <h4>Ingenieria de software</h4>
                         <span class="casa">Universidad Autonoma Para Adultos</span>
-                        <span class="fecha">2022 - 2026</span>
-                        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quis, cumque repellat, tempora recusandae aliquam nemo esse natus impedit, nostrum temporibus veritatis eaque soluta aperiam id repudiandae fugiat deserunt! Explicabo, veritatis?</p>
+                        <span class="fecha">2022 - <strong>PEDING</strong></span>
+                        <p>
+                            Throughout my tenure at University UAPA studying Software Engineering, I've significantly elevated my programming expertise, sharpened my problem-solving acumen, and delved into the complexities of large-scale software architecture. 
+                            Through rigorous coursework and hands-on experience, I've adeptly navigated intricate coding challenges and honed my analytical approach to problem-solving. Moreover, I've gained valuable insights into crafting robust and scalable software systems. 
+                            My ongoing commitment to advancing my skills underscores my dedication to academic and professional growth as I continue my studies at University UAPA.
+                        </p>
                         <div class="conectori">
                             <div class="circuloi"></div>
                         </div>
                     </div>
                     <div class="item izq">
-                        <h4>Arte y Multimedia</h4>
-                        <span class="casa">Universidad de Oxford</span>
-                        <span class="fecha">2005 - 2008</span>
-                        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quis, cumque repellat, tempora recusandae aliquam nemo esse natus impedit, nostrum temporibus veritatis eaque soluta aperiam id repudiandae fugiat deserunt! Explicabo, veritatis?</p>
+                        <h4>Online Plaforms y Courses</h4>
+                        <span class="casa">linkedin, Udemy, Freecodecamp</span>
+                        <span class="fecha">2018 - 2024</span>
+                        <p>
+                            In my pursuit of knowledge, I've embarked on a learning journey through various online platforms such as LinkedIn, YouTube, Udemy, and FreeCodeCamp. 
+                            Through these avenues, I've delved deep into the fundamentals of programming, explored the intricacies of web services, and gained expertise in managing relational databases.
+                            My skills extend to proficiency in languages like <b>Python</b>, <b>JavaScript</b>, <b>C#</b>, as well as frameworks like Django and Flask.
+                            Not only have I dedicated myself to mastering technical skills, but I've also invested time in improving my English language fluency and refining my communication abilities. 
+                            Furthermore, I've applied my learning to practical use by engaging in projects that tackle real-world challenges, thus cementing my understanding and applicability of acquired knowledge. 
+                            This comprehensive journey has equipped me with a robust skill set and a readiness to thrive in the dynamic landscape of digital innovation.
+                            
+
+                        </p>
                         <div class="conectori">
                             <div class="circuloi"></div>
                         </div>
                     </div>
                 </div>
-
+                
                 <div class="col derecha">
                     <h3>Work experience</h3>
                     <div class="item der">
@@ -371,19 +386,28 @@
             </div>
         </div>
     </section>
-
     <!-- SECCION CONTACTO -->
-    
-<section id="contacto" class="contacto">
-    <div class="contenido-seccion">
-        <h2>CONTACT</h2>
+
+   
+    {% with messages = get_flashed_messages() %}
+        {% if messages %}
+            {% for message in messages %}
+                <h5 id="flash-message" class="flash-message">{{ message }}</h5>
+            {% endfor %}
+        {% endif %}
+    {% endwith %}
+
+
+    <section id="contacto" class="contacto">
+        <div class="contenido-seccion">
+            <h2>CONTACT</h2>
         <div class="fila">
             <!-- Formulario -->
             <div class="col">
                 <form action="/send_message" method="POST">
                     <input type="text" required name="name" placeholder="Name">
-                    <input type="text" required name="phone" placeholder="Phone">
-                    <input type="text" required name="email" placeholder="Email">
+                    <input type="number" required name="phone" placeholder="Phone">
+                    <input type="email" required name="email" placeholder="Email">
                     <input type="text" required name="subject" placeholder="Subject">
                     <textarea required name="message" cols="30" rows="10" placeholder="Message"></textarea>
                     <button type="submit">
@@ -418,22 +442,22 @@
 </section>
 
 
-    <!-- footer -->
-    <footer>
+<!-- footer -->
+<footer>
         <!-- <a href="#inicio" class="arriba"> -->
             <a href="#inicio" class="arriba">
                 
                 <img src="{{ url_for('static', filename='image/up-arrow.png') }}" alt="up-arrow" style="height: 50px; width: 50px;">
             </a>
 
-        
-        <div class="redes">
-            <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+            
+            <!-- <div class="redes">
+                <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
             <a href="#"><i class="fa-brands fa-twitter"></i></a>
             <a href="#"><i class="fa-brands fa-skype"></i></a>
             <a href="#"><i class="fa-brands fa-linkedin-in"></i></a>
             <a href="#"><i class="fa-solid fa-rss"></i></a>
-        </div>
+        </div> -->
     </footer>
 
     <script src="{{ url_for('static', filename='main.js') }}"></script>
