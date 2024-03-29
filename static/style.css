@@ -6,6 +6,7 @@
     margin: 0;
     padding: 0;
 }
+
 html{
     /* me permite deslizar cuando hago clic en los links del menu */
     scroll-behavior: smooth;
@@ -105,7 +106,10 @@ h5{
     max-width: 60%;
     width: auto;
 }
+/* chatbot */
 
+  
+  /* image/RXi9.gif */
 /* SECCION I N I C I O */
 .inicio{
     background: linear-gradient(to top, rgba(30,35,38,.8), rgba(30,35,38,1)),
@@ -120,12 +124,12 @@ h5{
 
 
 .styled-link {
-    color: #000000; /* Color del enlace */
+    color: white; /* Color del enlace */
     text-decoration: none; /* Quita el subrayado */
 }
 
 .styled-link:hover {
-    color: darkred; /* Cambia el color al pasar el mouse */
+    color: red; /* Cambia el color al pasar el mouse */
 }
 
 .highlighted {
@@ -285,6 +289,18 @@ h5{
 .sobremi button:hover .overlay{
     width: 100%;
 }
+
+#avatar-container {
+    max-width: 100%; /* El contenedor ocupa todo el ancho disponible */
+    height: auto; /* Altura automática para mantener la proporción */
+    margin-right: 10%; /* Ajuste de margen a la derecha */
+}
+
+#avatar-container img {
+    max-width: 100%; /* La imagen ocupa todo el ancho del contenedor */
+    height: auto; /* Altura automática para mantener la proporción */
+}
+
 /* SECCION S K I L L S */
 .skills{
     background-color: #252A2E;
@@ -363,7 +379,7 @@ h5{
 }
 @keyframes PYTHON {
     0%{width: 0%;}
-    100%{width: 95%;}
+    100%{width: 80%;}
 }
 
 .skills .skill .FLASKYDJANGO{
@@ -392,6 +408,32 @@ h5{
     100%{width: 70%;}
 }
 
+.skills .skill .Csharp{
+    width: 0%;
+    animation: 2s Csharp forwards;
+}
+@keyframes Csharp {
+    0%{width: 0%;}
+    100%{width: 45%;}
+}
+
+.skills .skill .Excel{
+    width: 0%;
+    animation: 2s Excel forwards;
+}
+@keyframes Excel {
+    0%{width: 0%;}
+    100%{width: 75%;}
+}
+
+.skills .skill .PowerBI{
+    width: 0%;
+    animation: 2s PowerBI forwards;
+}
+@keyframes PowerBI {
+    0%{width: 0%;}
+    100%{width: 35%;}
+}
 .skills .skill .Comunication{
     width: 0%;
     animation: 2s Comunication forwards;
@@ -789,4 +831,18 @@ footer .arriba{
     .contacto .fila .col{
         width: 100%;
     }
+}
+
+.map-container {
+    position: relative;
+    overflow: hidden;
+    padding-top: 56.25%; /* Proporción 16:9 (56.25%) */
+}
+
+.map-container iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
 }

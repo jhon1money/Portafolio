@@ -23,8 +23,8 @@ function seleccionar(){
 }
 //Funcion que aplica las animaciones de las habilidades
 function efectoHabilidades(){
-    var skills = document.getElementById("skills");
-    var distancia_skills = window.innerHeight - skills.getBoundingClientRect().top;
+    const skills = document.getElementById("skills");
+    const distancia_skills = window.innerHeight - skills.getBoundingClientRect().top;
     if(distancia_skills >= 300){
         let habilidades = document.getElementsByClassName("progreso");
         habilidades[0].classList.add("HTMLCSS");
@@ -32,12 +32,15 @@ function efectoHabilidades(){
         habilidades[2].classList.add("FLASKYDJANGO");
         habilidades[3].classList.add("SQL");
         habilidades[4].classList.add("JAVASCRIPT");
+        habilidades[5].classList.add("Csharp");
+        habilidades[6].classList.add("Excel");
+        habilidades[7].classList.add("PowerBI");
 
-        habilidades[5].classList.add("Comunication");
-        habilidades[6].classList.add("Teamwork");
-        habilidades[7].classList.add("Creativity");
-        habilidades[8].classList.add("Dedication");
-        habilidades[9].classList.add("Ingles");
+        habilidades[8].classList.add("Comunication");
+        habilidades[9].classList.add("Teamwork");
+        habilidades[10].classList.add("Creativity");
+        habilidades[11].classList.add("Dedication");
+        habilidades[12].classList.add("Ingles");
     }
 }
 

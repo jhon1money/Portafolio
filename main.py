@@ -1,4 +1,4 @@
-from flask import Flask, render_template, send_file, request, flash
+from flask import Flask, render_template, send_file, request, flash, redirect, url_for
 from email.message import EmailMessage
 import ssl
 import os
@@ -36,7 +36,7 @@ def send_message():
             smtp.login(email_receiver, email_password)
             smtp.send_message(contact_email)
         flash(f"Thank you so much {name} I will be more than happy to reach back as soon as posible ")
-        return render_template('index.html')
+        return redirect(url_for('index'))
 
 @app.route('/download_cv')
 def download_cv():

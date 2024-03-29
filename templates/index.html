@@ -6,13 +6,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="{{ url_for('static', filename='fontawesome/css/all.min.css') }}" integrity="sha512-1sCRPdkRXhBV2PBLUdRb4tMg1w2YPf37qatUFeS7zlBy7jJI8Lf4VHwWfZZfpXtYSLy85pkm9GaYVYMfw5BC1A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="{{ url_for('static', filename='path/to/font-awesome/css/all.min.css') }}">
-
+    <link rel="icon" href="{{ url_for('static', filename='image/icon-web1.png') }}" type="image/png">
     <title>Portafolio</title>
     <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
   
 </head>
 <body>
-
     <!-- MENU ENCABEZADO -->
     <div class="contenedor-header">
         <header>
@@ -30,7 +29,7 @@
                 </ul>
             </nav>
             <div class="nav-responsive" onclick="mostrarOcultarMenu()">
-                <img src="{{ url_for('static', filename='image/menu.png') }}" alt="">
+                <img src="{{ url_for('static', filename='image/menu.png') }}" alt="avatar">
             </div>
         </header>
     </div>
@@ -76,7 +75,7 @@
                         </li>
                         <li>
                             <strong>Phone</strong>
-                            809 709 3903
+                            809-709-3903
                         </li>
                         <li>
                             <strong>Email</strong>
@@ -84,7 +83,7 @@
                         </li>
                         <li>
                             <strong>Website</strong>
-                            www.example.com
+                            <a href="http://quisqueyatech.pythonanywhere.com" class="styled-link">My proyect</a>
                         </li>
                         <li>
                             <strong>Address</strong>
@@ -96,7 +95,14 @@
                         </li>
                     </ul>
                 </div>
-
+                <div id="avatar-container" >
+                    <img src="{{ url_for('static', filename='image/avatar.png') }}" alt="Mi Avatar">
+                </div>
+                
+                
+                
+         
+                
                 <!-- intereses -->
                 <div class="col">
                     <h3>Interests</h3>
@@ -174,7 +180,7 @@
                         <span>PYTHON</span>
                         <div class="barra-skill">
                             <div class="progreso">
-                                <span>95%</span>
+                                <span>80%</span>
                             </div>
                         </div>
                     </div>
@@ -202,6 +208,29 @@
                             </div>
                         </div>
                     </div>
+                    <div class="skill">
+                        <span>C#</span>
+                        <div class="barra-skill">
+                            <div class="progreso">
+                                <span>45%</span>
+                            </div>
+                        </div>
+                        <div class="skill">
+                            <span>Excel</span>
+                            <div class="barra-skill">
+                                <div class="progreso">
+                                    <span>75%</span>
+                                </div>
+                            </div>
+                    </div>
+                    <div class="skill">
+                        <span>Power BI</span>
+                        <div class="barra-skill">
+                            <div class="progreso">
+                                <span>35%</span>
+                            </div>
+                        </div>
+                </div>
                 </div>
                 <!-- Professional Skills -->
                 <div class="col">
@@ -305,6 +334,20 @@
                 <div class="col derecha">
                     <h3>Work experience</h3>
                     <div class="item der">
+                        <h4>Developer</h4>
+                        <span class="casa">Chatbot</span>
+                        <span class="fecha">2023/09/01 - 2023/12/05</span>
+                        <p>
+                            During my time at Scotiabank as a Customer Care Advisor, I refined my communication skills while emphasizing empathy and effective communication with customers. 
+                            Engaging in various projects aimed at enhancing service quality, I gained valuable experience collaborating with diverse teams. 
+                            Notably, I found involvement in developing a chatbot particularly rewarding, deepening my understanding of digital customer needs. 
+                            Overall, my tenure at Scotiabank equipped me with strong customer service, communication, and problem-solving abilities, ready to contribute positively to any team or organization.
+                        </p>
+                        <!-- <div class="conectord">
+                            <div class="circulod"></div>
+                        </div>
+                    </div> -->
+                    <!-- <div class="item der">
                         <h4>Front Developer</h4>
                         <span class="casa">Nombre de Compañía</span>
                         <span class="fecha">2005 - 2008</span>
@@ -312,24 +355,15 @@
                         <div class="conectord">
                             <div class="circulod"></div>
                         </div>
-                    </div>
-                    <div class="item der">
+                    </div> -->
+                    <!-- <div class="item der">
                         <h4>Front Developer</h4>
                         <span class="casa">Nombre de Compañía</span>
                         <span class="fecha">2005 - 2008</span>
                         <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quis, cumque repellat, tempora recusandae aliquam nemo esse natus impedit, nostrum temporibus veritatis eaque soluta aperiam id repudiandae fugiat deserunt! Explicabo, veritatis?</p>
                         <div class="conectord">
                             <div class="circulod"></div>
-                        </div>
-                    </div>
-                    <div class="item der">
-                        <h4>Front Developer</h4>
-                        <span class="casa">Nombre de Compañía</span>
-                        <span class="fecha">2005 - 2008</span>
-                        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quis, cumque repellat, tempora recusandae aliquam nemo esse natus impedit, nostrum temporibus veritatis eaque soluta aperiam id repudiandae fugiat deserunt! Explicabo, veritatis?</p>
-                        <div class="conectord">
-                            <div class="circulod"></div>
-                        </div>
+                        </div> -->
                     </div>
                 </div>
             </div>
@@ -342,10 +376,12 @@
             <h2>BRIEFCASE</h2>
             <div class="galeria">
                 <div class="proyecto">
-                    <img src="{{ url_for('static', filename='image/python.jpg') }}" alt="">
+                    <img src="{{ url_for('static', filename='image/TODOLIST.jpg') }}" alt="">
                     <div class="overlay">
-                        <h3>Diseño Creativo</h3>
-                        <p>Fotografía</p>
+                        <h3>TO-DO LIST</h3>
+                        <p>I've developed an impressive To-Do List that highlights my web development skills.
+                        Used modern technologies like Flask and SQLAlchemy to create a smooth and engaging user experience.</p>
+                            
                     </div>
                 </div>
                 <div class="proyecto">
@@ -419,7 +455,13 @@
             
             <!-- Mapa -->
             <div class="col">
-                <img src="{{ url_for('static', filename='image/Ubicacion.png') }}" alt="">
+                <!-- <img src="{{ url_for('static', filename='image/Ubicacion.png') }}" alt=""> -->
+                <div class="map-container">
+                    <iframe 
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3152.6167224274395!2d-69.82488285684532!3d18.497184639749445!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8eaf8652f3a08f4d%3A0x3c505c7d938d2462!2sCj%C3%B3n.%20B%2C%20Santo%20Domingo%20Este%2C%20Rep%C3%BAblica%20Dominicana!5e0!3m2!1ses-419!2sus!4v1709996984225!5m2!1ses-419!2sus" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
+                    </iframe>
+                </div>
+                
                 <div class="info">
                     <ul>
                         <li>
